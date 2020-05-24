@@ -1,0 +1,7 @@
+.idea
+*.iml
+target
+*.zip
+build
+*.jpeg
+*.jpg
