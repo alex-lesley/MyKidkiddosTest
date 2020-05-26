@@ -1,3 +1,4 @@
+import constants.Constants;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import org.junit.jupiter.api.BeforeAll;
@@ -5,7 +6,9 @@ import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.ValueSource;
+import pages.CartPage;
 import pages.ContactUsPage;
+import pages.LoginPage;
 import utils.BaseCases;
 import static org.junit.jupiter.api.Assertions.*;
 
@@ -90,10 +93,43 @@ public class ContactUsFormTest extends BaseCases {
 
     @ParameterizedTest
     @ValueSource(strings = {VALID_NAME, NUMBERS, SPECIAL_CHARACTERS, LONG_TEXT})
-    public void messageFieldPopulaationTest(String text) {
+    public void messageFieldPopulationTest(String text) {
         logger.info("Your message field population test");
         contactUsPage.sendTextToMessageField(text);
         contactUsPage.clickSendButton();
         assertEquals(text, contactUsPage.getTextFromMessageField(), "Text in Your message field does not match");
     }
+
+    @Test
+    public void openLoginPageTest() {
+        logger.info("Login page open test");
+        LoginPage loginPage = contactUsPage.openLoginPage();
+        loginPage.takeScreenshot("Login_page");
+        assertEquals(Constants.LOGIN_PAGE_URL, loginPage.getPageURL(), "Login page URL does not match");
+        assertTrue(loginPage.isHeaderVisible(), "Login page header is not visible");
+    }
+
+    @Test
+    public void openCartPageTest() {
+        logger.info("Cart page open test");
+        CartPage cartPage = contactUsPage.openCartPage();
+        cartPage.takeScreenshot("Cart_page");
+        assertEquals(Constants.CART_PAGE_URL, cartPage.getPageURL(), "Cart page URL does not match");
+        assertTrue(cartPage.isHeaderVisible(), "Cart page header is not visible");
+    }
+
+    @ParameterizedTest
+    @ValueSource(strings = {"AUD", "BRL", "CAD", "EUR", "GBP", "INR", "NZD", "SGD", "USD"})
+    public void currencySelectTest(String currencyCode) {
+        contactUsPage.selectCurrency(String.format(ContactUsPage.CURRENCY_LINK_XPATH, currencyCode));
+        assertTrue(contactUsPage.isCurrencySelected(String.format(ContactUsPage.SELECTED_CURRENCY_XPATH, currencyCode)), "The selected currency is not shown");
+    }
+
+    @Test
+    public void autoCurrencySelectTest() {
+        assertTrue(contactUsPage.isCurrencySelected(String.format(ContactUsPage.SELECTED_CURRENCY_XPATH, ContactUsPage.LOCAL_CURRENCY)), "The local currency is not shown");
+        contactUsPage.selectCurrency(String.format(ContactUsPage.CURRENCY_LINK_XPATH, ContactUsPage.AUTO_CURRENCY));
+        assertTrue(contactUsPage.isCurrencySelected(String.format(ContactUsPage.SELECTED_CURRENCY_XPATH, ContactUsPage.LOCAL_CURRENCY)), "The auto selected currency is not shown");
+    }
+
 }
