@@ -29,7 +29,7 @@ public class MainPage extends BasePage {
 
     public BlogPage openBlogPageResources() {
         clickElementByXpath(Constants.RESOURCES_MENU_LINK);
-        clickElementByXpath(Constants.BLOG_PAGE_LINK);
+        clickElementByXpath(Constants.BLOG_PAGE_RESOURCES_LINK);
         return new BlogPage();
     }
 

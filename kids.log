@@ -1,0 +1,8 @@
+2020-05-26 21:23:50.304 [main] DEBUG io.github.bonigarcia.wdm.Preferences - Preference chrome=81 (valid until 2020-05-26 23:16:07)
+2020-05-26 21:23:50.308 [main] DEBUG io.github.bonigarcia.wdm.Preferences - Preference chrome81=81.0.4044.138 (valid until 2020-05-26 23:16:07)
+2020-05-26 21:23:50.309 [main] INFO  io.github.bonigarcia.wdm.WebDriverManager - Using chromedriver 81.0.4044.138 (since Google Chrome 81 is installed in your machine)
+2020-05-26 21:23:50.320 [main] DEBUG io.github.bonigarcia.wdm.WebDriverManager - Driver chromedriver 81.0.4044.138 found in cache
+2020-05-26 21:23:50.321 [main] INFO  io.github.bonigarcia.wdm.WebDriverManager - Exporting webdriver.chrome.driver as C:\Users\user\.m2\repository\webdriver\chromedriver\win32\81.0.4044.138\chromedriver.exe
+2020-05-26 21:23:58.677 [main] INFO  MainPageTest - Blog page from menu Resources open test
+2020-05-26 21:23:58.677 [main] INFO  pages.BasePage - Clicking element with xpath: //a[@href='/pages/videos-for-kids'][@class='site-nav__link site-nav__link--main']
+2020-05-26 21:23:58.778 [main] INFO  pages.BasePage - Clicking element with xpath: //a[text()='Blog'][@class='site-nav__link site-nav__child-link site-nav__link--last']//parent::li
