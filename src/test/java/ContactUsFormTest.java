@@ -121,12 +121,14 @@ public class ContactUsFormTest extends BaseCases {
     @ParameterizedTest
     @ValueSource(strings = {"AUD", "BRL", "CAD", "EUR", "GBP", "INR", "NZD", "SGD", "USD"})
     public void currencySelectTest(String currencyCode) {
+        logger.info("Currency selection test");
         contactUsPage.selectCurrency(String.format(ContactUsPage.CURRENCY_LINK_XPATH, currencyCode));
         assertTrue(contactUsPage.isCurrencySelected(String.format(ContactUsPage.SELECTED_CURRENCY_XPATH, currencyCode)), "The selected currency is not shown");
     }
 
     @Test
     public void autoCurrencySelectTest() {
+        logger.info("Auto currency selection test");
         assertTrue(contactUsPage.isCurrencySelected(String.format(ContactUsPage.SELECTED_CURRENCY_XPATH, ContactUsPage.LOCAL_CURRENCY)), "The local currency is not shown");
         contactUsPage.selectCurrency(String.format(ContactUsPage.CURRENCY_LINK_XPATH, ContactUsPage.AUTO_CURRENCY));
         assertTrue(contactUsPage.isCurrencySelected(String.format(ContactUsPage.SELECTED_CURRENCY_XPATH, ContactUsPage.LOCAL_CURRENCY)), "The auto selected currency is not shown");

@@ -18,7 +18,7 @@ public class BaseCases {
 
     @AfterAll
     public static void tearDownMain() {
-        webDriver.close();
+        SharedDriver.closeDriver();
         webDriver = null;
     }
 }

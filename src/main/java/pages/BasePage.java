@@ -16,7 +16,7 @@ public class BasePage {
     private static final Logger logger = LogManager.getLogger(BasePage.class);
 
     public void setWebDriver(WebDriver webDriver) {
-        this.webDriver = webDriver;
+        BasePage.webDriver = webDriver;
         wait = new WebDriverWait(webDriver, 5);
     }
 
@@ -26,8 +26,7 @@ public class BasePage {
 
     protected WebElement findElementByXpath(String xpath) {
         wait.until(ExpectedConditions.presenceOfElementLocated(By.xpath(xpath)));
-        WebElement webElement = webDriver.findElement(By.xpath(xpath));
-        return webElement;
+        return webDriver.findElement(By.xpath(xpath));
     }
 
     protected void clickElementByXpath(String xpath) {
@@ -62,5 +61,14 @@ public class BasePage {
         } catch (IOException e) {
             e.printStackTrace();
         }
+    }
+
+    public String getTextFromTextFieldByXpath(String xpath) {
+        wait.until(ExpectedConditions.presenceOfElementLocated(By.xpath(xpath)));
+        return webDriver.findElement(By.xpath(xpath)).getText();
+    }
+
+    public void navigateBack() {
+        webDriver.navigate().back();
     }
 }
