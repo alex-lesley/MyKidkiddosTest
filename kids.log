@@ -1,8 +1,113 @@
-2020-05-26 21:23:50.304 [main] DEBUG io.github.bonigarcia.wdm.Preferences - Preference chrome=81 (valid until 2020-05-26 23:16:07)
-2020-05-26 21:23:50.308 [main] DEBUG io.github.bonigarcia.wdm.Preferences - Preference chrome81=81.0.4044.138 (valid until 2020-05-26 23:16:07)
-2020-05-26 21:23:50.309 [main] INFO  io.github.bonigarcia.wdm.WebDriverManager - Using chromedriver 81.0.4044.138 (since Google Chrome 81 is installed in your machine)
-2020-05-26 21:23:50.320 [main] DEBUG io.github.bonigarcia.wdm.WebDriverManager - Driver chromedriver 81.0.4044.138 found in cache
-2020-05-26 21:23:50.321 [main] INFO  io.github.bonigarcia.wdm.WebDriverManager - Exporting webdriver.chrome.driver as C:\Users\user\.m2\repository\webdriver\chromedriver\win32\81.0.4044.138\chromedriver.exe
-2020-05-26 21:23:58.677 [main] INFO  MainPageTest - Blog page from menu Resources open test
-2020-05-26 21:23:58.677 [main] INFO  pages.BasePage - Clicking element with xpath: //a[@href='/pages/videos-for-kids'][@class='site-nav__link site-nav__link--main']
-2020-05-26 21:23:58.778 [main] INFO  pages.BasePage - Clicking element with xpath: //a[text()='Blog'][@class='site-nav__link site-nav__child-link site-nav__link--last']//parent::li
+2020-06-09 21:05:40.888 [main] DEBUG io.github.bonigarcia.wdm.Preferences - Preference chrome=83 (valid until 2020-06-10 16:47:16)
+2020-06-09 21:05:40.892 [main] DEBUG io.github.bonigarcia.wdm.Preferences - Preference chrome83=83.0.4103.39 (valid until 2020-06-10 16:47:16)
+2020-06-09 21:05:40.893 [main] INFO  io.github.bonigarcia.wdm.WebDriverManager - Using chromedriver 83.0.4103.39 (since Google Chrome 83 is installed in your machine)
+2020-06-09 21:05:40.906 [main] DEBUG io.github.bonigarcia.wdm.WebDriverManager - Driver chromedriver 83.0.4103.39 found in cache
+2020-06-09 21:05:40.908 [main] INFO  io.github.bonigarcia.wdm.WebDriverManager - Exporting webdriver.chrome.driver as C:\Users\user\.m2\repository\webdriver\chromedriver\win32\83.0.4103.39\chromedriver.exe
+2020-06-09 21:05:47.744 [main] INFO  ContactUsFormTest - Empty Your message field test
+2020-06-09 21:05:47.744 [main] INFO  pages.BasePage - Sending text to element with xpath: //input[@name='field[3]']
+2020-06-09 21:05:47.881 [main] INFO  pages.BasePage - Sending text to element with xpath: //input[@name='email']
+2020-06-09 21:05:48.046 [main] INFO  pages.BasePage - Sending text to element with xpath: //textarea[@name='field[7]']
+2020-06-09 21:05:48.144 [main] INFO  pages.BasePage - Clicking element with xpath: //button[text()=' Send your message ']
+2020-06-09 21:05:49.711 [main] INFO  ContactUsFormTest - Empty Your message field test
+2020-06-09 21:05:49.711 [main] INFO  pages.BasePage - Sending text to element with xpath: //input[@name='field[3]']
+2020-06-09 21:05:49.832 [main] INFO  pages.BasePage - Sending text to element with xpath: //input[@name='email']
+2020-06-09 21:05:49.968 [main] INFO  pages.BasePage - Sending text to element with xpath: //textarea[@name='field[7]']
+2020-06-09 21:05:50.074 [main] INFO  pages.BasePage - Clicking element with xpath: //button[text()=' Send your message ']
+2020-06-09 21:05:51.553 [main] INFO  ContactUsFormTest - Auto currency selection test
+2020-06-09 21:05:51.618 [main] INFO  pages.BasePage - Clicking element with xpath: //span[contains(@class, 'currency-converter-currency-button')]
+2020-06-09 21:05:51.737 [main] INFO  pages.BasePage - Clicking element with xpath: //ul[contains(@class, 'currency-converter-chooser')][not(contains(@style, 'display: none'))]/li[contains(@class, 'refresh')]
+2020-06-09 21:05:52.744 [main] INFO  ContactUsFormTest - Empty Email field test
+2020-06-09 21:05:52.744 [main] INFO  pages.BasePage - Sending text to element with xpath: //input[@name='field[3]']
+2020-06-09 21:05:52.891 [main] INFO  pages.BasePage - Sending text to element with xpath: //input[@name='email']
+2020-06-09 21:05:53.008 [main] INFO  pages.BasePage - Sending text to element with xpath: //textarea[@name='field[7]']
+2020-06-09 21:05:53.820 [main] INFO  pages.BasePage - Clicking element with xpath: //button[text()=' Send your message ']
+2020-06-09 21:05:55.192 [main] INFO  ContactUsFormTest - Empty Email field test
+2020-06-09 21:05:55.192 [main] INFO  pages.BasePage - Sending text to element with xpath: //input[@name='field[3]']
+2020-06-09 21:05:55.418 [main] INFO  pages.BasePage - Sending text to element with xpath: //input[@name='email']
+2020-06-09 21:05:55.545 [main] INFO  pages.BasePage - Sending text to element with xpath: //textarea[@name='field[7]']
+2020-06-09 21:05:56.353 [main] INFO  pages.BasePage - Clicking element with xpath: //button[text()=' Send your message ']
+2020-06-09 21:05:57.818 [main] INFO  ContactUsFormTest - Empty Email field test
+2020-06-09 21:05:57.818 [main] INFO  pages.BasePage - Sending text to element with xpath: //input[@name='field[3]']
+2020-06-09 21:05:57.965 [main] INFO  pages.BasePage - Sending text to element with xpath: //input[@name='email']
+2020-06-09 21:05:58.881 [main] INFO  pages.BasePage - Sending text to element with xpath: //textarea[@name='field[7]']
+2020-06-09 21:05:59.761 [main] INFO  pages.BasePage - Clicking element with xpath: //button[text()=' Send your message ']
+2020-06-09 21:06:00.958 [main] INFO  ContactUsFormTest - Empty Email field test
+2020-06-09 21:06:00.958 [main] INFO  pages.BasePage - Sending text to element with xpath: //input[@name='field[3]']
+2020-06-09 21:06:01.392 [main] INFO  pages.BasePage - Sending text to element with xpath: //input[@name='email']
+2020-06-09 21:06:01.512 [main] INFO  pages.BasePage - Sending text to element with xpath: //textarea[@name='field[7]']
+2020-06-09 21:06:02.329 [main] INFO  pages.BasePage - Clicking element with xpath: //button[text()=' Send your message ']
+2020-06-09 21:06:04.007 [main] INFO  ContactUsFormTest - Name field population test
+2020-06-09 21:06:04.007 [main] INFO  pages.BasePage - Sending text to element with xpath: //input[@name='field[3]']
+2020-06-09 21:06:04.157 [main] INFO  pages.BasePage - Clicking element with xpath: //button[text()=' Send your message ']
+2020-06-09 21:06:05.208 [main] INFO  ContactUsFormTest - Name field population test
+2020-06-09 21:06:05.208 [main] INFO  pages.BasePage - Sending text to element with xpath: //input[@name='field[3]']
+2020-06-09 21:06:05.360 [main] INFO  pages.BasePage - Clicking element with xpath: //button[text()=' Send your message ']
+2020-06-09 21:06:06.407 [main] INFO  ContactUsFormTest - Name field population test
+2020-06-09 21:06:06.408 [main] INFO  pages.BasePage - Sending text to element with xpath: //input[@name='field[3]']
+2020-06-09 21:06:06.568 [main] INFO  pages.BasePage - Clicking element with xpath: //button[text()=' Send your message ']
+2020-06-09 21:06:07.288 [main] INFO  ContactUsFormTest - Name field population test
+2020-06-09 21:06:07.288 [main] INFO  pages.BasePage - Sending text to element with xpath: //input[@name='field[3]']
+2020-06-09 21:06:08.462 [main] INFO  pages.BasePage - Clicking element with xpath: //button[text()=' Send your message ']
+2020-06-09 21:06:09.470 [main] INFO  ContactUsFormTest - Your message field population test
+2020-06-09 21:06:09.471 [main] INFO  pages.BasePage - Sending text to element with xpath: //textarea[@name='field[7]']
+2020-06-09 21:06:09.613 [main] INFO  pages.BasePage - Clicking element with xpath: //button[text()=' Send your message ']
+2020-06-09 21:06:10.646 [main] INFO  ContactUsFormTest - Your message field population test
+2020-06-09 21:06:10.646 [main] INFO  pages.BasePage - Sending text to element with xpath: //textarea[@name='field[7]']
+2020-06-09 21:06:10.793 [main] INFO  pages.BasePage - Clicking element with xpath: //button[text()=' Send your message ']
+2020-06-09 21:06:11.830 [main] INFO  ContactUsFormTest - Your message field population test
+2020-06-09 21:06:11.830 [main] INFO  pages.BasePage - Sending text to element with xpath: //textarea[@name='field[7]']
+2020-06-09 21:06:11.988 [main] INFO  pages.BasePage - Clicking element with xpath: //button[text()=' Send your message ']
+2020-06-09 21:06:13.038 [main] INFO  ContactUsFormTest - Your message field population test
+2020-06-09 21:06:13.038 [main] INFO  pages.BasePage - Sending text to element with xpath: //textarea[@name='field[7]']
+2020-06-09 21:06:13.843 [main] INFO  pages.BasePage - Clicking element with xpath: //button[text()=' Send your message ']
+2020-06-09 21:06:15.031 [main] INFO  ContactUsFormTest - Empty Email field test
+2020-06-09 21:06:15.031 [main] INFO  pages.BasePage - Sending text to element with xpath: //input[@name='field[3]']
+2020-06-09 21:06:15.178 [main] INFO  pages.BasePage - Sending text to element with xpath: //input[@name='email']
+2020-06-09 21:06:15.281 [main] INFO  pages.BasePage - Sending text to element with xpath: //textarea[@name='field[7]']
+2020-06-09 21:06:16.045 [main] INFO  pages.BasePage - Clicking element with xpath: //button[text()=' Send your message ']
+2020-06-09 21:06:17.489 [main] INFO  ContactUsFormTest - Empty Email field test
+2020-06-09 21:06:17.489 [main] INFO  pages.BasePage - Sending text to element with xpath: //input[@name='field[3]']
+2020-06-09 21:06:17.627 [main] INFO  pages.BasePage - Sending text to element with xpath: //input[@name='email']
+2020-06-09 21:06:17.732 [main] INFO  pages.BasePage - Sending text to element with xpath: //textarea[@name='field[7]']
+2020-06-09 21:06:18.513 [main] INFO  pages.BasePage - Clicking element with xpath: //button[text()=' Send your message ']
+2020-06-09 21:06:20.043 [main] INFO  ContactUsFormTest - Empty Name field test
+2020-06-09 21:06:20.043 [main] INFO  pages.BasePage - Sending text to element with xpath: //input[@name='field[3]']
+2020-06-09 21:06:20.170 [main] INFO  pages.BasePage - Sending text to element with xpath: //input[@name='email']
+2020-06-09 21:06:20.302 [main] INFO  pages.BasePage - Sending text to element with xpath: //textarea[@name='field[7]']
+2020-06-09 21:06:21.067 [main] INFO  pages.BasePage - Clicking element with xpath: //button[text()=' Send your message ']
+2020-06-09 21:06:22.220 [main] INFO  ContactUsFormTest - Empty Name field test
+2020-06-09 21:06:22.221 [main] INFO  pages.BasePage - Sending text to element with xpath: //input[@name='field[3]']
+2020-06-09 21:06:22.584 [main] INFO  pages.BasePage - Sending text to element with xpath: //input[@name='email']
+2020-06-09 21:06:22.756 [main] INFO  pages.BasePage - Sending text to element with xpath: //textarea[@name='field[7]']
+2020-06-09 21:06:23.556 [main] INFO  pages.BasePage - Clicking element with xpath: //button[text()=' Send your message ']
+2020-06-09 21:06:25.086 [main] INFO  ContactUsFormTest - Cart page open test
+2020-06-09 21:06:25.086 [main] INFO  pages.BasePage - Clicking element with xpath: //a[@href='/cart']
+2020-06-09 21:06:27.301 [main] INFO  ContactUsFormTest - Login page open test
+2020-06-09 21:06:27.302 [main] INFO  pages.BasePage - Clicking element with xpath: //a[@href='/account/login']
+2020-06-09 21:06:29.959 [main] INFO  ContactUsFormTest - Currency selection test
+2020-06-09 21:06:29.959 [main] INFO  pages.BasePage - Clicking element with xpath: //span[contains(@class, 'currency-converter-currency-button')]
+2020-06-09 21:06:30.092 [main] INFO  pages.BasePage - Clicking element with xpath: //ul[contains(@class, 'currency-converter-chooser')][not(contains(@style, 'display: none'))]/li[contains(@class, 'AUD')]
+2020-06-09 21:06:31.095 [main] INFO  ContactUsFormTest - Currency selection test
+2020-06-09 21:06:31.096 [main] INFO  pages.BasePage - Clicking element with xpath: //span[contains(@class, 'currency-converter-currency-button')]
+2020-06-09 21:06:31.220 [main] INFO  pages.BasePage - Clicking element with xpath: //ul[contains(@class, 'currency-converter-chooser')][not(contains(@style, 'display: none'))]/li[contains(@class, 'BRL')]
+2020-06-09 21:06:32.249 [main] INFO  ContactUsFormTest - Currency selection test
+2020-06-09 21:06:32.249 [main] INFO  pages.BasePage - Clicking element with xpath: //span[contains(@class, 'currency-converter-currency-button')]
+2020-06-09 21:06:32.375 [main] INFO  pages.BasePage - Clicking element with xpath: //ul[contains(@class, 'currency-converter-chooser')][not(contains(@style, 'display: none'))]/li[contains(@class, 'CAD')]
+2020-06-09 21:06:33.124 [main] INFO  ContactUsFormTest - Currency selection test
+2020-06-09 21:06:33.124 [main] INFO  pages.BasePage - Clicking element with xpath: //span[contains(@class, 'currency-converter-currency-button')]
+2020-06-09 21:06:33.402 [main] INFO  pages.BasePage - Clicking element with xpath: //ul[contains(@class, 'currency-converter-chooser')][not(contains(@style, 'display: none'))]/li[contains(@class, 'EUR')]
+2020-06-09 21:06:34.552 [main] INFO  ContactUsFormTest - Currency selection test
+2020-06-09 21:06:34.552 [main] INFO  pages.BasePage - Clicking element with xpath: //span[contains(@class, 'currency-converter-currency-button')]
+2020-06-09 21:06:34.679 [main] INFO  pages.BasePage - Clicking element with xpath: //ul[contains(@class, 'currency-converter-chooser')][not(contains(@style, 'display: none'))]/li[contains(@class, 'GBP')]
+2020-06-09 21:06:35.475 [main] INFO  ContactUsFormTest - Currency selection test
+2020-06-09 21:06:35.475 [main] INFO  pages.BasePage - Clicking element with xpath: //span[contains(@class, 'currency-converter-currency-button')]
+2020-06-09 21:06:35.731 [main] INFO  pages.BasePage - Clicking element with xpath: //ul[contains(@class, 'currency-converter-chooser')][not(contains(@style, 'display: none'))]/li[contains(@class, 'INR')]
+2020-06-09 21:06:37.105 [main] INFO  ContactUsFormTest - Currency selection test
+2020-06-09 21:06:37.106 [main] INFO  pages.BasePage - Clicking element with xpath: //span[contains(@class, 'currency-converter-currency-button')]
+2020-06-09 21:06:37.232 [main] INFO  pages.BasePage - Clicking element with xpath: //ul[contains(@class, 'currency-converter-chooser')][not(contains(@style, 'display: none'))]/li[contains(@class, 'NZD')]
+2020-06-09 21:06:38.322 [main] INFO  ContactUsFormTest - Currency selection test
+2020-06-09 21:06:38.322 [main] INFO  pages.BasePage - Clicking element with xpath: //span[contains(@class, 'currency-converter-currency-button')]
+2020-06-09 21:06:38.452 [main] INFO  pages.BasePage - Clicking element with xpath: //ul[contains(@class, 'currency-converter-chooser')][not(contains(@style, 'display: none'))]/li[contains(@class, 'SGD')]
+2020-06-09 21:06:39.604 [main] INFO  ContactUsFormTest - Currency selection test
+2020-06-09 21:06:39.604 [main] INFO  pages.BasePage - Clicking element with xpath: //span[contains(@class, 'currency-converter-currency-button')]
+2020-06-09 21:06:39.735 [main] INFO  pages.BasePage - Clicking element with xpath: //ul[contains(@class, 'currency-converter-chooser')][not(contains(@style, 'display: none'))]/li[contains(@class, 'USD')]

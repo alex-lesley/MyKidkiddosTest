@@ -79,28 +79,28 @@ public class MainPageTest extends BaseCases {
     @Test
     public void openSpanishCollectionPageTest() {
         logger.info("Spanish Collection page open test");
-        LanguageCollectionPage languageCollectionPage = mainPage.openLanguageCollectionPage(Constants.SPANISH_COLLECTION_PAGE_LINK);
+        LanguageCollectionPage languageCollectionPage = mainPage.openLanguageCollectionPage(String.format(Constants.COLLECTION_PAGE_LINK, "spanish"));
         languageCollectionPage.takeScreenshot("Spanish_collection_page");
-        assertEquals(Constants.SPANISH_COLLECTION_PAGE_URL, languageCollectionPage.getPageURL(), "Spanish Collection page URL does not match");
-        assertTrue(languageCollectionPage.isHeaderVisible(Constants.SPANISH_COLLECTION_PAGE_HEADER), "Spanish Collection page header is not visible");
+        assertEquals(String.format(Constants.COLLECTION_PAGE_URL, "spanish"), languageCollectionPage.getPageURL(), "Spanish Collection page URL does not match");
+        assertTrue(languageCollectionPage.isHeaderVisible(String.format(Constants.COLLECTION_PAGE_HEADER, "Spanish")), "Spanish Collection page header is not visible");
     }
 
     @Test
     public void openFrenchCollectionPageTest() {
         logger.info("French Collection page open test");
-        LanguageCollectionPage languageCollectionPage = mainPage.openLanguageCollectionPage(Constants.FRENCH_COLLECTION_PAGE_LINK);
+        LanguageCollectionPage languageCollectionPage = mainPage.openLanguageCollectionPage(String.format(Constants.COLLECTION_PAGE_LINK, "french"));
         languageCollectionPage.takeScreenshot("French_collection_page");
-        assertEquals(Constants.FRENCH_COLLECTION_PAGE_URL, languageCollectionPage.getPageURL(), "French Collection page URL does not match");
-        assertTrue(languageCollectionPage.isHeaderVisible(Constants.FRENCH_COLLECTION_PAGE_HEADER), "French Collection page header is not visible");
+        assertEquals(String.format(Constants.COLLECTION_PAGE_URL, "french"), languageCollectionPage.getPageURL(), "French Collection page URL does not match");
+        assertTrue(languageCollectionPage.isHeaderVisible(String.format(Constants.COLLECTION_PAGE_HEADER, "French")), "French Collection page header is not visible");
     }
 
     @Test
     public void openChineseCollectionPageTest() {
         logger.info("Chinese Collection page open test");
-        LanguageCollectionPage languageCollectionPage = mainPage.openLanguageCollectionPage(Constants.CHINESE_COLLECTION_PAGE_LINK);
+        LanguageCollectionPage languageCollectionPage = mainPage.openLanguageCollectionPage(String.format(Constants.COLLECTION_PAGE_LINK, "chinese"));
         languageCollectionPage.takeScreenshot("Chinese_collection_page");
-        assertEquals(Constants.CHINESE_COLLECTION_PAGE_URL, languageCollectionPage.getPageURL(), "Chinese Collection page URL do not match");
-        assertTrue(languageCollectionPage.isHeaderVisible(Constants.CHINESE_COLLECTION_PAGE_HEADER), "Chinese Collection page header is not visible");
+        assertEquals(String.format(Constants.COLLECTION_PAGE_URL, "chinese"), languageCollectionPage.getPageURL(), "Chinese Collection page URL do not match");
+        assertTrue(languageCollectionPage.isHeaderVisible(String.format(Constants.COLLECTION_PAGE_HEADER, "Mandarin Chinese")), "Chinese Collection page header is not visible");
     }
 
     @Test
@@ -117,8 +117,8 @@ public class MainPageTest extends BaseCases {
         logger.info("Arabic Collection page open from Books by languages menu test");
         LanguageCollectionPage languageCollectionPage = mainPage.openLanguageCollectionPageByLanguages(Constants.BOOKS_BY_LANGUAGE_MENU_LINK, Constants.ARABIC_COLLECTION_PAGE_BY_LANGUAGE_LINK);
         languageCollectionPage.takeScreenshot("Arabic_collection_page_by_language");
-        assertEquals(Constants.ARABIC_COLLECTION_PAGE_URL, languageCollectionPage.getPageURL(), "Arabic Collection page URL does not match");
-        assertTrue(languageCollectionPage.isHeaderVisible(Constants.ARABIC_COLLECTION_PAGE_HEADER), "Arabic Collection page header is not visible");
+        assertEquals(String.format(Constants.COLLECTION_PAGE_URL, "arabic"), languageCollectionPage.getPageURL(), "Arabic Collection page URL does not match");
+        assertTrue(languageCollectionPage.isHeaderVisible(String.format(Constants.COLLECTION_PAGE_HEADER, "Arabic")), "Arabic Collection page header is not visible");
     }
 
     @Test
@@ -126,8 +126,8 @@ public class MainPageTest extends BaseCases {
         logger.info("Bulgarian Collection page open from Books by language menu test");
         LanguageCollectionPage languageCollectionPage = mainPage.openLanguageCollectionPageByLanguages(Constants.BOOKS_BY_LANGUAGE_MENU_LINK, Constants.BULGARIAN_COLLECTION_PAGE_BY_LANGUAGE_LINK);
         languageCollectionPage.takeScreenshot("Bulgarian_collection_page_by_language");
-        assertEquals(Constants.BULGARIAN_COLLECTION_PAGE_URL, languageCollectionPage.getPageURL(), "Bulgarian Collection page URL does not match");
-        assertTrue(languageCollectionPage.isHeaderVisible(Constants.BULGARIAN_COLLECTION_PAGE_HEADER), "Bulgarian Collection page header is not visible");
+        assertEquals(String.format(Constants.COLLECTION_PAGE_URL, "bulgarian"), languageCollectionPage.getPageURL(), "Bulgarian Collection page URL does not match");
+        assertTrue(languageCollectionPage.isHeaderVisible(String.format(Constants.COLLECTION_PAGE_HEADER, "Bulgarian")), "Bulgarian Collection page header is not visible");
     }
 
     @Test
@@ -144,8 +144,8 @@ public class MainPageTest extends BaseCases {
         logger.info("Arabic Collection page open from All languages menu test");
         LanguageCollectionPage languageCollectionPage = mainPage.openLanguageCollectionPageByLanguages(Constants.ALL_LANGUAGES_MENU_LINK, Constants.ARABIC_COLLECTION_PAGE_ALL_LANGUAGES_LINK);
         languageCollectionPage.takeScreenshot("Arabic_collection_page_all_languages");
-        assertEquals(Constants.ARABIC_COLLECTION_PAGE_URL, languageCollectionPage.getPageURL(), "Arabic Collection page URL does not match");
-        assertTrue(languageCollectionPage.isHeaderVisible(Constants.ARABIC_COLLECTION_PAGE_HEADER), "Arabic Collection page header is not visible");
+        assertEquals(String.format(Constants.COLLECTION_PAGE_URL, "arabic"), languageCollectionPage.getPageURL(), "Arabic Collection page URL does not match");
+        assertTrue(languageCollectionPage.isHeaderVisible(String.format(Constants.COLLECTION_PAGE_HEADER, "Arabic")), "Arabic Collection page header is not visible");
     }
 
     @Test
@@ -153,8 +153,8 @@ public class MainPageTest extends BaseCases {
         logger.info("Bulgarian Collection page open from All languages menu test");
         LanguageCollectionPage languageCollectionPage = mainPage.openLanguageCollectionPageByLanguages(Constants.ALL_LANGUAGES_MENU_LINK, Constants.BULGARIAN_COLLECTION_PAGE_ALL_LANGUAGES_LINK);
         languageCollectionPage.takeScreenshot("Bulgarian_collection_page_all_languages");
-        assertEquals(Constants.BULGARIAN_COLLECTION_PAGE_URL, languageCollectionPage.getPageURL(), "Bulgarian Collection page URL does not match");
-        assertTrue(languageCollectionPage.isHeaderVisible(Constants.BULGARIAN_COLLECTION_PAGE_HEADER), "Bulgarian Collection page header is not visible");
+        assertEquals(String.format(Constants.COLLECTION_PAGE_URL, "bulgarian"), languageCollectionPage.getPageURL(), "Bulgarian Collection page URL does not match");
+        assertTrue(languageCollectionPage.isHeaderVisible(String.format(Constants.COLLECTION_PAGE_HEADER, "Bulgarian")), "Bulgarian Collection page header is not visible");
     }
 
     @Test
@@ -171,8 +171,8 @@ public class MainPageTest extends BaseCases {
         logger.info("Arabic E-books Collection page open test");
         LanguageCollectionPage languageCollectionPage = mainPage.openEbooksCollectionPage(Constants.ARABIC_EBOOKS_COLLECTION_PAGE_LINK);
         languageCollectionPage.takeScreenshot("Arabic_collection_page_all_languages");
-        assertEquals(Constants.ARABIC_EBOOKS_PAGE_URL, languageCollectionPage.getPageURL(), "Arabic E-books Collection page URL does not match");
-        assertTrue(languageCollectionPage.isHeaderVisible(Constants.ARABIC_EBOOKS_COLLECTION_PAGE_HEADER), "Arabic E-books Collection page header is not visible");
+        assertEquals(String.format(Constants.COLLECTION_PAGE_URL, "ebooks-in-arabic"), languageCollectionPage.getPageURL(), "Arabic E-books Collection page URL does not match");
+        assertTrue(languageCollectionPage.isHeaderVisible(String.format(Constants.COLLECTION_PAGE_HEADER, "eBooks in Arabic")), "Arabic E-books Collection page header is not visible");
     }
 
     @Test
@@ -180,8 +180,8 @@ public class MainPageTest extends BaseCases {
         logger.info("Chinese E-books Collection page open test");
         LanguageCollectionPage languageCollectionPage = mainPage.openEbooksCollectionPage(Constants.CHINESE_EBOOKS_COLLECTION_PAGE_LINK);
         languageCollectionPage.takeScreenshot("Chinese_collection_page_all_languages");
-        assertEquals(Constants.CHINESE_EBOOKS_PAGE_URL, languageCollectionPage.getPageURL(), "Chinese E-books Collection page URL does not match");
-        assertTrue(languageCollectionPage.isHeaderVisible(Constants.CHINESE_EBOOKS_COLLECTION_PAGE_HEADER), "Chinese E-books Collection page header is not visible");
+        assertEquals(String.format(Constants.COLLECTION_PAGE_URL, "ebooks-in-chinese-mandarin"), languageCollectionPage.getPageURL(), "Chinese E-books Collection page URL does not match");
+        assertTrue(languageCollectionPage.isHeaderVisible(String.format(Constants.COLLECTION_PAGE_HEADER, "eBooks in Chinese Mandarin")), "Chinese E-books Collection page header is not visible");
     }
 
 
