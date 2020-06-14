@@ -48,6 +48,31 @@ public class LanguageCollectionPage extends BasePage{
         return getTextFromTextFieldByXpath(BOOKS_NUMBER_IN_CART);
     }
 
+    public void addBookFromCollection(String book, String collection) {
+        navigateToCollectionPage(collection);
+        chooseBook(book);
+        clickAddButton();
+    }
+
+    public void addHardcoverBookFromCollection(String book, String collection) {
+        navigateToCollectionPage(collection);
+        chooseBook(book);
+        choseHardcoverOption();
+        clickAddButton();
+    }
+
+    public void addBookFromCollection(String book1, String book2, String collection) {
+        navigateToCollectionPage(collection);
+        chooseBook(book1, book2);
+        clickAddButton();
+    }
+
+    public void clearCart() {
+        while(isElementExistByXpath(BOOKS_NUMBER_IN_CART)) {
+            clickRemoveButton();
+        }
+    }
+
 
 
 }
