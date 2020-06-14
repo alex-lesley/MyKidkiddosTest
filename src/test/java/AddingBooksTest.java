@@ -20,24 +20,26 @@ public class AddingBooksTest extends BaseCases {
     private static final String BOOK5_1 = "I Love Autumn";
     private static final String BOOK5_2 = "Book in Spanish";
     private static final String BOOK6 = "I Love to Sleep";
+    private static final String COLLECTION_1_URL = "english-only";
+    private static final String COLLECTION_2_URL = "ebooks-in-english-only";
+    private static final String COLLECTION_3_URL = "spanish";
+    private static final String COLLECTION_4_URL = "french";
 
-    @BeforeEach
-    public void testSetup() {
+    @BeforeAll
+    public static void classSetup() {
         collectionPage = new LanguageCollectionPage();
-        collectionPage.navigateToCollectionPage("english-only");
     }
 
     @AfterEach
     public void testTearDown() {
-        collectionPage.clickRemoveButton();
+        collectionPage.clearCart();
     }
 
 
     @Test
     public void addingEnglishBookTest() {
         logger.info("Adding one english book to cart test");
-        collectionPage.chooseBook(BOOK1);
-        collectionPage.clickAddButton();
+        collectionPage.addBookFromCollection(BOOK1, COLLECTION_1_URL);
         assertEquals("1", collectionPage.getNumberFromCart());
         collectionPage.takeScreenshot("One_book_added");
     }
@@ -45,60 +47,37 @@ public class AddingBooksTest extends BaseCases {
     @Test
     public void addingThreeEnglishBooksTest() {
         logger.info("Adding three printed english books to cart test");
-        collectionPage.chooseBook("Amanda");
-        collectionPage.clickAddButton();
-        collectionPage.navigateBack();
-        collectionPage.navigateBack();
-        collectionPage.chooseBook(BOOK2);
-        collectionPage.clickAddButton();
-        collectionPage.navigateBack();
-        collectionPage.navigateBack();
-        collectionPage.chooseBook(BOOK3);
-        collectionPage.clickAddButton();
+        collectionPage.addBookFromCollection(BOOK1, COLLECTION_1_URL);
+        collectionPage.addBookFromCollection(BOOK2, COLLECTION_1_URL);
+        collectionPage.addBookFromCollection(BOOK3, COLLECTION_1_URL);
         assertEquals("3", collectionPage.getNumberFromCart());
         collectionPage.takeScreenshot("Three_books_added");
-        collectionPage.clickRemoveButton();
-        collectionPage.clickRemoveButton();
     }
 
     @Test
     public void addingEnglishPrintedAndEbookTest() {
         logger.info("Adding one printed and one electronic english books to cart test");
-        collectionPage.chooseBook(BOOK1);
-        collectionPage.clickAddButton();
-        collectionPage.navigateToCollectionPage("ebooks-in-english-only");
-        collectionPage.chooseBook(BOOK4);
-        collectionPage.clickAddButton();
+        collectionPage.addBookFromCollection(BOOK1, COLLECTION_1_URL);
+        collectionPage.addBookFromCollection(BOOK4, COLLECTION_2_URL);
         assertEquals("2", collectionPage.getNumberFromCart());
         collectionPage.takeScreenshot("Printed_and_ebook_added");
-        collectionPage.clickRemoveButton();
     }
 
     @Test
     public void addingThreeLanguagesBooksEbookTest() {
         logger.info("Adding books in tree languages to cart test");
-        collectionPage.chooseBook(BOOK1);
-        collectionPage.clickAddButton();
-        collectionPage.navigateToCollectionPage("spanish");
-        collectionPage.chooseBook(BOOK5_1, BOOK5_2);
-        collectionPage.clickAddButton();
-        collectionPage.navigateToCollectionPage("french");
-        collectionPage.chooseBook(BOOK6);
-        collectionPage.clickAddButton();
+        collectionPage.addBookFromCollection(BOOK1, COLLECTION_1_URL);
+        collectionPage.addBookFromCollection(BOOK5_1, BOOK5_2, COLLECTION_3_URL);
+        collectionPage.addBookFromCollection(BOOK6, COLLECTION_4_URL);
         assertEquals("3", collectionPage.getNumberFromCart());
         collectionPage.takeScreenshot("Different_language_books_added");
-        collectionPage.clickRemoveButton();
-        collectionPage.clickRemoveButton();
     }
 
     @Test
     public void addingPaperbackAndHardcoverBookTest() {
         logger.info("Adding the same english book in paperback and hardcover to cart test");
-        collectionPage.chooseBook(BOOK1);
-        collectionPage.clickAddButton();
-        collectionPage.navigateBack();
-        collectionPage.choseHardcoverOption();
-        collectionPage.clickAddButton();
+        collectionPage.addBookFromCollection(BOOK1, COLLECTION_1_URL);
+        collectionPage.addHardcoverBookFromCollection(BOOK1, COLLECTION_1_URL);
         assertEquals("2", collectionPage.getNumberFromCart());
         collectionPage.takeScreenshot("Paperback_and_hardcover_books_added");
     }
